@@ -6,7 +6,7 @@ export function GradesBand({ children }: { children: ReactNode }) {
     <div
       role="region"
       aria-label="Awarded A2 grades, 2023–24 session"
-      className="rounded-lg border border-amber-400/35 bg-amber-400/[0.09] p-3 dark:border-amber-500/30 dark:bg-amber-500/[0.12] [&>div.relative]:my-0"
+      className="rounded-lg border border-(--color-fd-warning)/35 bg-(--color-fd-warning)/10 p-3 [&>div.relative]:my-0"
       data-slot="grades-a2-band"
     >
       {children}

@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Git commits
+
+Do **not** add `Co-authored-by:` trailers for Claude, Cursor, or other AI tools to commit messages. The human author owns the commits.
+
 ## Context7 Libraries
 
 - Fumadocs: `/fuma-nama/fumadocs` (primary — 948 snippets, score 82.75)
