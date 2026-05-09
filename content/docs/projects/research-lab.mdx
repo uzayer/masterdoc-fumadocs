@@ -59,12 +59,12 @@ flowchart LR
     L3 --> L4["TREEE Modules<br>(biomedical ethics)"]
     L4 --> L_Out[RA]
 
-    style L_In fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style L1 fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style L2 fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style L3 fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style L4 fill:#ffebee,stroke:#c62828,stroke-width:2px
-    style L_Out fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style L_In stroke:#dc2626,stroke-width:2px
+    style L1 stroke:#dc2626,stroke-width:2px
+    style L2 stroke:#dc2626,stroke-width:2px
+    style L3 stroke:#dc2626,stroke-width:2px
+    style L4 stroke:#dc2626,stroke-width:2px
+    style L_Out stroke:#dc2626,stroke-width:2px
 ```
 *Figure 1: Legacy Recruitment Pipeline*
 
@@ -95,9 +95,9 @@ flowchart LR
 
     N_In --> N1 --> N2 --> N3 --> N_Out
 
-    style N1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style N2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style N3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style N1 stroke:#16a34a,stroke-width:2px
+    style N2 stroke:#16a34a,stroke-width:2px
+    style N3 stroke:#16a34a,stroke-width:2px
 ```
 *Figure 2: Redesigned Recruitment Pipeline*
 
@@ -118,11 +118,10 @@ flowchart LR
 
     Input --> P1 --> P2 --> P3 --> Output
 
-    style P1 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style P2 fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    style P3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style Input fill:#f3e5f5,stroke:#7b1fa2
-    style Output fill:#37474f,color:white,stroke:#cfd8dc
+    style P1 stroke:#1565c0,stroke-width:2px
+    style P2 stroke:#e65100,stroke-width:2px
+    style P3 stroke:#16a34a,stroke-width:2px
+    style Input stroke:#7b1fa2,stroke-width:2px
 ```
 *Figure 3: Theory of Change - Progressive Resolution System*
 
@@ -175,13 +174,13 @@ flowchart LR
         TP1 --> A3["Paper X<br>(manual entry)"]
         TP2 --> A4["Paper X<br>(manual entry)"]
         GT --> A5["Paper X<br>(manual entry)"]
-        style A1 fill:#ffcdd2,stroke:#c62828
-        style A2 fill:#ffcdd2,stroke:#c62828
-        style A3 fill:#ffcdd2,stroke:#c62828
-        style A4 fill:#ffcdd2,stroke:#c62828
-        style A5 fill:#ffcdd2,stroke:#c62828
-        style MORE fill:#ffebee,stroke:#c62828,stroke-dasharray: 3 3
-        style Tree fill:#fff3e0,stroke:#bf360c,stroke-width:2px,stroke-dasharray: 5 5
+        style A1 stroke:#dc2626
+        style A2 stroke:#dc2626
+        style A3 stroke:#dc2626
+        style A4 stroke:#dc2626
+        style A5 stroke:#dc2626
+        style MORE stroke:#dc2626
+        style Tree stroke:#dc2626,stroke-width:2px
     end
 ```
 **Figure 1:** In the legacy page tree, the same paper must be entered multiple times as disconnected manual entries - once under News, once under Projects, once under each author's profile and then more.
@@ -197,9 +196,9 @@ flowchart LR
         PUB -->|published in| VENUE[ACL 2024]
         PUB -->|tagged| MORE["..."]
         PROJ -->|funded by| GRANT[NSF Grant]
-        style PUB fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-        style MORE fill:#e8f5e9,stroke:#1b5e20,stroke-dasharray: 3 3
-        style RKOP fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+        style PUB stroke:#1565c0,stroke-width:2px
+        style MORE stroke:#16a34a
+        style RKOP stroke:#16a34a,stroke-width:2px
     end
 ```
 **Figure 2:** In LabKit, the same paper is a single node with declared relationships. File it once; the graph propagates it everywhere.
