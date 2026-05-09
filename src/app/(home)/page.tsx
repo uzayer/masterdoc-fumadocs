@@ -4,11 +4,10 @@ import { cn } from '@/lib/cn';
 
 const sections = [
   { label: 'Preface', href: '/preface' },
-  { label: 'Colophon', href: '/preface#colophon' },
   { label: 'History', href: '/history' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Reference', href: '/reference' },
   { label: 'Academic record', href: '/academic-record' },
+  { label: 'Reference', href: '/reference' },
 ] as const;
 
 export default function HomePage() {
@@ -47,7 +46,7 @@ export default function HomePage() {
 
       <div className="mt-12 border-t border-fd-border pt-10">
         <h2 className="text-xs font-semibold uppercase tracking-wide text-fd-muted-foreground">
-          Inside the doc
+          Inside the gungeon
         </h2>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
           {sections.map(({ label, href }) => (
