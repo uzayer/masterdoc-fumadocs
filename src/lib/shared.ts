@@ -1,5 +1,5 @@
 export const appName = 'Uzayer Masud';
-export const docsRoute = '/docs';
+export const docsRoute = '/';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
 

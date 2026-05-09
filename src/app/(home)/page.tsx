@@ -1,15 +1,14 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { docsRoute } from '@/lib/shared';
 import { cn } from '@/lib/cn';
 
 const sections = [
-  { label: 'Preface', hash: 'preface' },
-  { label: 'Colophon', hash: 'colophon' },
-  { label: 'History', hash: 'history' },
-  { label: 'Projects', hash: 'projects' },
-  { label: 'Reference', hash: 'reference' },
-  { label: 'Academic record', hash: 'academic-record' },
+  { label: 'Preface', href: '/preface' },
+  { label: 'Colophon', href: '/preface#colophon' },
+  { label: 'History', href: '/history' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Reference', href: '/reference' },
+  { label: 'Academic record', href: '/academic-record' },
 ] as const;
 
 export default function HomePage() {
@@ -32,7 +31,7 @@ export default function HomePage() {
       </p>
 
       <Link
-        href={docsRoute}
+        href="/preface"
         className={cn(
           'mt-10 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-colors',
           'bg-fd-primary text-fd-primary-foreground hover:opacity-90',
@@ -51,10 +50,10 @@ export default function HomePage() {
           Inside the doc
         </h2>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-          {sections.map(({ label, hash }) => (
-            <li key={hash}>
+          {sections.map(({ label, href }) => (
+            <li key={href}>
               <Link
-                href={`${docsRoute}#${hash}`}
+                href={href}
                 className="flex items-center justify-between gap-3 rounded-lg border border-fd-border bg-fd-card px-4 py-3 text-sm font-medium text-fd-card-foreground transition-colors hover:bg-fd-accent/60"
               >
                 {label}
