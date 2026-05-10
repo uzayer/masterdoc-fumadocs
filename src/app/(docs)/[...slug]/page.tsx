@@ -59,6 +59,7 @@ export async function generateMetadata(props: PageProps<'/[...slug]'>): Promise<
     openGraph: {
       title: page.data.title,
       description: page.data.description,
+      url: page.url,
       images: getPageImage(page).url,
       type: 'article',
     },
