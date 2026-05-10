@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import { DM_Sans, Tenor_Sans, JetBrains_Mono } from 'next/font/google';
@@ -49,6 +50,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
         <RootProvider>
           {children}
         </RootProvider>
+        <Analytics />
       </body>
     </html>
   );
