@@ -4,6 +4,7 @@ const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const config = {
+  output: 'export',
   reactStrictMode: true,
   allowedDevOrigins: ['m4-pro.local', '192.168.0.126'],
 };
