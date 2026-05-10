@@ -5,6 +5,7 @@ import {
   DocsPage,
   DocsTitle,
   MarkdownCopyButton,
+  PageLastUpdate,
   ViewOptionsPopover,
 } from 'fumadocs-ui/layouts/docs/page';
 import { notFound } from 'next/navigation';
@@ -20,6 +21,7 @@ export default async function Page(props: PageProps<'/[...slug]'>) {
 
   const MDX = page.data.body;
   const markdownUrl = getPageMarkdownUrl(page).url;
+  const lastModified = (page.data as typeof page.data & { lastModified?: Date }).lastModified;
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
@@ -31,6 +33,7 @@ export default async function Page(props: PageProps<'/[...slug]'>) {
           markdownUrl={markdownUrl}
           githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
         />
+        {lastModified && <PageLastUpdate date={lastModified} className="ml-auto" />}
       </div>
       <DocsBody>
         <MDX
