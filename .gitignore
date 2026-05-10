@@ -28,3 +28,6 @@ next-env.d.ts
 # agent tooling
 .agents/
 skills-lock.json
+
+# generated/local PDFs
+pdfs/

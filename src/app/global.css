@@ -141,3 +141,28 @@ html > body[data-scroll-locked] {
     font-weight: 400;
   }
 }
+
+@media print {
+  @page {
+    margin: 20mm 15mm;
+  }
+
+  #nd-docs-layout {
+    --fd-sidebar-width: 0px !important;
+  }
+  #nd-sidebar {
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+  }
+
+  pre, code, table, figure, blockquote, .fd-card, [class*="card"] {
+    break-inside: avoid;
+  }
+
+  li {
+    break-inside: avoid;
+  }
+}

@@ -36,11 +36,11 @@ export default function HomePage() {
           'bg-fd-primary text-fd-primary-foreground hover:opacity-90',
         )}
       >
-        enter talking stage
+        enter the lore
         <ArrowRight className="size-4 shrink-0" aria-hidden />
       </Link>
       <p className="mt-3 max-w-prose text-sm leading-relaxed text-fd-muted-foreground">
-        The talking stage is non-linear, 10k+ words and comes with diagrams, receipts and metacognitive philosophy. Coffee highly
+        The lore is non-linear, 10k+ words and comes with diagrams, receipts and metacognitive philosophy. Coffee highly
         recommended.
       </p>
 
