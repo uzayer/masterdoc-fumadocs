@@ -8,6 +8,7 @@ import { GradeTableLayout } from '@/components/grade-table-layout';
 import { GradesBand } from '@/components/grades-band';
 import { Mermaid } from '@/components/mdx/mermaid';
 import { OrgTag } from '@/components/org-tag';
+import { StatusCard } from '@/components/status-card';
 
 export function getMDXComponents(components?: MDXComponents) {
   return {
@@ -23,6 +24,7 @@ export function getMDXComponents(components?: MDXComponents) {
     GradesBand,
     Mermaid,
     OrgTag,
+    StatusCard,
     ...components,
   } satisfies MDXComponents;
 }
