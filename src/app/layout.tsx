@@ -2,6 +2,16 @@ import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import { DM_Sans, Tenor_Sans, JetBrains_Mono } from 'next/font/google';
 import { cn } from "@/lib/utils";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://helloworld.uzayermasud.com'),
+  title: {
+    template: '%s | Uzayer Masud',
+    default: 'Uzayer Masud',
+  },
+  description: 'Personal portfolio and biography of Uzayer Masud.',
+};
 
 
 const tenorSans = Tenor_Sans({
