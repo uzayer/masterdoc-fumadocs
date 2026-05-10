@@ -20,7 +20,7 @@ export default function HomePage() {
         <mark
           className={cn(
             'box-decoration-clone rounded px-1 py-0.5 [-webkit-box-decoration-break:clone]',
-            'bg-fd-idea/25 text-fd-foreground',
+            'bg-fd-primary/22 text-fd-foreground dark:bg-fd-primary/28',
           )}
         >
           I care about language, cognition, research, and infrastructure that is meant to outlast any
@@ -33,7 +33,7 @@ export default function HomePage() {
         href="/preface"
         className={cn(
           'mt-10 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-colors',
-          'bg-fd-primary text-fd-primary-foreground hover:opacity-90',
+          'bg-fd-primary text-white hover:opacity-90 dark:text-fd-primary-foreground',
         )}
       >
         enter the lore
