@@ -16,7 +16,6 @@ export const orgs: Record<string, OrgEntry> = {
     name: 'DIAL, North South University',
     shortName: 'DIAL',
     description: 'HCI lab in the ECE department of NSU. Lab director: Dr. Nova Ahmed. Founded 2020.',
-    url: 'https://dial.northsouth.edu',
   },
   TDS: {
     name: 'The Daily Star',
