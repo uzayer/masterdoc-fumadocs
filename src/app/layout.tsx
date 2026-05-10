@@ -17,11 +17,13 @@ export const metadata: Metadata = {
     url: 'https://helloworld.uzayermasud.com',
     siteName: 'Uzayer Masud',
     type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, type: 'image/png', alt: 'Uzayer Masud — Personal portfolio' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Uzayer Masud',
     description: 'Personal portfolio of Uzayer Masud.',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Uzayer Masud — Personal portfolio' }],
   },
 };
 
