@@ -1,45 +1,42 @@
 # masterdoc-fumadocs
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+Personal portfolio/biography site built with [Next.js](https://nextjs.org) and [Fumadocs](https://fumadocs.dev). Renders the Masterdoc — a long personal document — as a navigable docs site with a sidebar TOC.
 
-Run development server:
+## Development
 
 ```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+pnpm dev          # Start dev server at localhost:3000
+pnpm build        # Production build (also runs fumadocs-mdx codegen)
+pnpm lint         # Run ESLint
+pnpm types:check  # Run fumadocs-mdx codegen + Next.js typegen + tsc
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+> `fumadocs-mdx` must run before TypeScript can resolve types from `.source/` — it runs automatically on `postinstall` and as part of `types:check`.
 
-## Explore
+## Project structure
 
-In the project, you can see:
+```
+src/
+  app/
+    (home)/           # Landing page
+    (docs)/           # Docs layout + page renderer
+    api/search/       # Fumadocs search API
+    og/docs/          # OG image generation
+    llms.txt          # LLM-readable content
+    llms-full.txt     # LLM-readable content (full)
+    sitemap.ts        # Auto-generated sitemap
+    robots.ts         # robots.txt
+  components/         # Custom MDX component overrides
+  lib/
+    source.ts         # Fumadocs loader wrapping the docs collection
+    shared.ts         # App name, route constants, git config
+    layout.shared.tsx # Shared layout options (sidebar, nav)
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+content/docs/         # MDX source files (edit these)
+source.config.ts      # Fumadocs collection definition
+.source/              # Auto-generated — do not edit
+```
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+## Content
 
-### Fumadocs MDX
-
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
-
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
-
-## Learn More
-
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+Add or edit `.mdx` files in `content/docs/`. The sidebar order is controlled by `content/docs/meta.json`.

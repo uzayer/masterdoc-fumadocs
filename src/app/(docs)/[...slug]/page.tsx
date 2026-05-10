@@ -53,6 +53,14 @@ export async function generateMetadata(props: PageProps<'/[...slug]'>): Promise<
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const ogImage = {
+    url: getPageImage(page).url,
+    width: 1200,
+    height: 630,
+    type: 'image/png',
+    alt: page.data.title,
+  };
+
   return {
     title: page.data.title,
     description: page.data.description,
@@ -60,14 +68,14 @@ export async function generateMetadata(props: PageProps<'/[...slug]'>): Promise<
       title: page.data.title,
       description: page.data.description,
       url: page.url,
-      images: getPageImage(page).url,
+      images: [ogImage],
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
       title: page.data.title,
       description: page.data.description,
-      images: getPageImage(page).url,
+      images: [{ url: ogImage.url, width: ogImage.width, height: ogImage.height, alt: ogImage.alt }],
     },
   };
 }
