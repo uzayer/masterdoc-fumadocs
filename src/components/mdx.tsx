@@ -4,6 +4,8 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { File, Files, Folder } from 'fumadocs-ui/components/files';
 import { GradeTableLayout } from '@/components/grade-table-layout';
 import { GradesBand } from '@/components/grades-band';
 import { Mermaid } from '@/components/mdx/mermaid';
@@ -19,6 +21,11 @@ export function getMDXComponents(components?: MDXComponents) {
     Accordions,
     Step,
     Steps,
+    Card,
+    Cards,
+    File,
+    Files,
+    Folder,
     img: (props) => <ImageZoom {...(props as Parameters<typeof ImageZoom>[0])} />,
     GradeTableLayout,
     GradesBand,
