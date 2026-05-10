@@ -11,6 +11,18 @@ export const metadata: Metadata = {
     default: 'Uzayer Masud',
   },
   description: 'Personal portfolio of Uzayer Masud.',
+  openGraph: {
+    title: 'Uzayer Masud',
+    description: 'Personal portfolio of Uzayer Masud.',
+    url: 'https://helloworld.uzayermasud.com',
+    siteName: 'Uzayer Masud',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Uzayer Masud',
+    description: 'Personal portfolio of Uzayer Masud.',
+  },
 };
 
 
