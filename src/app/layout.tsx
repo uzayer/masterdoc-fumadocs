@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | Uzayer Masud',
     default: 'Uzayer Masud',
   },
-  description: 'Personal portfolio and biography of Uzayer Masud.',
+  description: 'Personal portfolio of Uzayer Masud.',
 };
 
 
