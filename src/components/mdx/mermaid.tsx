@@ -2,6 +2,7 @@ import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
 import { renderMermaidSVG } from 'beautiful-mermaid';
 
 export async function Mermaid({ chart }: { chart: string }) {
+  let responsiveSvg: string | null = null;
   try {
     const svg = renderMermaidSVG(chart, {
       bg: 'var(--color-fd-background)',
@@ -16,19 +17,23 @@ export async function Mermaid({ chart }: { chart: string }) {
     // on the <svg> element. Prepending max-width/height:auto to the SVG's inline style
     // lets it scale down when the container is narrower than the diagram, while the
     // outer overflow-x:auto wrapper gives a horizontal scrollbar for very wide diagrams.
-    const responsiveSvg = svg.replace(
+    responsiveSvg = svg.replace(
       /(<svg\b[^>]+\bstyle=")([^"]*)/,
       '$1max-width:100%;height:auto;$2',
     );
-
-    return (
-      <div style={{ overflowX: 'auto' }} dangerouslySetInnerHTML={{ __html: responsiveSvg }} />
-    );
   } catch {
+    responsiveSvg = null;
+  }
+
+  if (responsiveSvg === null) {
     return (
       <CodeBlock title="Mermaid">
         <Pre>{chart}</Pre>
       </CodeBlock>
     );
   }
+
+  return (
+    <div style={{ overflowX: 'auto' }} dangerouslySetInnerHTML={{ __html: responsiveSvg }} />
+  );
 }
