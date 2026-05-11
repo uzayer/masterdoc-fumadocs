@@ -1,0 +1,33 @@
+---
+title: "Literature Workflow Redesign with Ghost CMS"
+description: Migrated DAY Literature from a multi-tab Google Sheets workflow to Ghost CMS, restructuring articles as state objects and editors as first-class citizens.
+icon: Workflow
+tags: [projects, systems, software]
+---
+
+*2024*
+
+## What
+
+- DAY Literature is the largest department construed of smaller teams with lead editors and writers, a separate publishing team works on getting things live. The workflow is complex and lives inside a multi-tab Google spreadsheet that serves as team management, reference library and project tracking.
+
+- The previous workflow had a big human error surface area due to gruntwork repetition. Applied software DRY principles to migrate to a simpler open-source Ghost CMS & Google Docs architecture.
+  - Redesigned the architecture to treat Editors as first-class citizens, providing them with dashboards, credit, and better tools.
+
+- The legacy workflow (Google Sheets) treated articles as static files hidden in tabs. The new workflow (Ghost Dashboard) treats articles as state objects (Pitch -> Review -> Published). This shift from file management to state management reduces the cognitive load on the team, as the status of every piece of content is visible at a glance.
+
+- To solve the invisible editor problem, I utilised Ghost's tag system (e.g., tagging a post `Edited by: Chloe Dong`). This forces the CMS to auto-generate a public portfolio page for every editor so they have a shareable record of their contributions.
+  - Credit allocation is structurally enforced by design instead of being left as an afterthought.
+
+- Decoupled the act of writing (Google Docs or whatever the writer wants) from the act of publishing (Ghost). This allows writers to work in a familiar environment without wrestling with a CMS, while editors control the final rendered state.
+
+## Why
+
+- The previous workflow only made sense if you were in the team for a long while. Simplifying it was proper engineering in my opinion because then it's less prone to breaking. Maintenance tax is real sadly and the previous one already had lapses in records.
+- Editors got credit at the end of the article, with their names written in different formats sometimes. The data design had no space for editors as first-class entities next to writers.
+- Moving to Ghost (Open Source) aligns our infrastructure with our values of transparency and ensures we own our data rather than renting it from a closed garden like Wix.
+
+## Additional Info
+
+- Used webhooks to listen for tag changes. When an article is tagged `#editorial-review`, the system automatically creates a Google Doc from the pitch, links it back to Ghost, and alerts the editing team on Discord. This removes the manual friction of setting up documents.
+- Visibility is the currency of contribution. Using the tagging system to generate editor portfolios was my way of re-engineering the symbolic economy of the team.

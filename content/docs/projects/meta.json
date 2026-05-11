@@ -1,5 +1,22 @@
 {
   "title": "Projects",
   "icon": "Layers",
-  "pages": ["index", "research-lab", "organisational-systems", "standalone"]
+  "pages": [
+    "---Research & Lab---",
+    "misgendered-nlp",
+    "dial-recruitment",
+    "labkit",
+    "researchnet",
+    "hci-internship",
+    "---Organisational Systems---",
+    "breezers-brew",
+    "ghost-cms-workflow",
+    "day-design-system",
+    "gitlab-handbook",
+    "fieldkit",
+    "---Standalone---",
+    "sirkoi",
+    "auctus",
+    "writing-workshop"
+  ]
 }
