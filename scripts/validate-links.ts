@@ -23,12 +23,14 @@ async function main() {
     },
   });
 
-  const files = pagesWithData.map(({ page, raw }) => ({
-    path: page.absolutePath,
-    content: raw,
-    url: page.url,
-    data: page.data,
-  }));
+  const files = pagesWithData
+    .filter(({ page }) => page.absolutePath !== undefined)
+    .map(({ page, raw }) => ({
+      path: page.absolutePath as string,
+      content: raw,
+      url: page.url,
+      data: page.data,
+    }));
 
   printErrors(
     await validateFiles(files, {
