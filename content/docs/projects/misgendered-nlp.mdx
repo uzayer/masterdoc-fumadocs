@@ -1,0 +1,31 @@
+---
+title: "Nonbinary NLP Research Proposal (MISGENDERED++)"
+description: A robustness evaluation framework for gender bias benchmarks in LLMs. Archived after a newer paper solved the core engineering problem.
+icon: FlaskConical
+tags: [projects, research]
+---
+
+<Callout type="warn" title="Archived">
+Archived after *Ovalle et al. (2024)* argued that neo-pronouns were being incorrectly spliced at the tokeniser level - fixing that essentially solved the underlying engineering problem this proposal was diagnosing. A diagnostic benchmark became a solution in search of a problem.
+</Callout>
+
+*2024 - Archived*
+
+## What
+
+- An architectural plan for a robustness evaluation framework designed to address gaps in the *MISGENDERED* (Hossain et al., 2023) benchmark.
+  - The paper tried to evaluate gender bias in LLMs by benchmarking how well it handled nonbinary pronoun usage. They used masked language modeling which was like a template based approach. It would feed in a sentence and ask the model to complete it (fill in the blanks)
+  - While *MISGENDERED* relied on explicit declaration templates ("Jamie uses xe/xem"), my proposal introduced implicit contextual usage ("Jamie is preparing xyr report") and adversarial testing (injecting noise, distractors, and code-switching) to model real-world usage.
+
+- **Produced a paper proposal with citations.** This was my first independent project at DIAL, pitched to the PI and the rest of the lab. I had qualitative analysis foundations from doing IAL Psychology, I taught myself the basics of academia from YouTube and started reading papers to do a literature review.
+
+- AI research moves VERY fast, and by the time I was done learning what a literature review is in the first place, another paper came out that already solved the problem.
+  - *Ovalle et al. (2024)* argued that neo-pronouns were being incorrectly spliced at the tokeniser level, fixing that essentially solved the problem.
+
+## Why
+
+- I argued that existing frameworks measured memorisation of pronouns instead of *grammatical understanding*. My proposed framework would test whether the model could use the correct pronoun even when the context is noisy or ambiguous.
+
+- I archived it because I believed that since the engineering problem was being solved, a diagnostic tool (my benchmark) would be a solution in search of a problem.
+- I learned a lot about ML and NLP methodology, and especially at the dataset level. I read multiple papers and I remember this one case where despite not having formal ML foundations I could have a gut feeling that something won't work.
+  - E.g, one paper argued that to reduce gender bias in LLMs, they could delete the entire vector space that gender touches. I felt like a proposal like this could only come from having a limited understanding of gender itself. It is fluid by nature and affects many things, trying to do a blunt remove is a bad idea.

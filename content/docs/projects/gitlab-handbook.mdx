@@ -1,0 +1,53 @@
+---
+title: "GitLab-Inspired Handbook"
+description: Public, version-controlled handbook for DAY — documentation as code, with .codeowners files enforcing maintenance responsibility per department.
+icon: BookMarked
+tags: [projects, systems]
+---
+
+*2024 – Ongoing*
+
+## What
+
+- DAY is completely remote and async by default. This type of organisation won twice, once during COVID, again during the agentic era. **This means the entire organisation needs to be legible to both remote workers and AI.**
+
+- A public, open-source, version-controlled handbook (built with Astro + Starlight) that serves as the single source of truth (SSoT) for the entire organisation.
+
+- An org handbook exists to answer the question of how and why something is done. It is the company knowledge distilled onto written form. This is an intentional practice that is incredibly annoying to do at first but pays compounding dividends the longer you do it. Sections have DRIs (directly responsible individuals) and anybody can contribute.
+  - This is documentation as code. Changes are submitted as pull requests reviewed by code owners, and versioned in Git.
+
+- A shift from information siloed in heads or DMs to explicit knowledge (live at `handbook.dearasianyouth.org`)
+
+## Why
+
+- DAY has 300+ remote volunteers, information needs to flow fast and free to the person that needs it. This is both async and scaleable.
+- **If it's not written down, it doesn't exist**
+  - We adopted GitLab's philosophy to have a handbook that ensures that every member operates on the same shared reality.
+
+- Given the structure, this forces the person to contextualise their change in the larger scheme of how the organisation works. They have to locate the section where their change would be, and see what else gets affected. This is something AI is still notoriously bad at.
+  - Anyone in the organisation, or even outside it, can submit a change. This is to **decentralise governance** and take a flatter and more community oriented approach. The DRI only needs to see the change, and then accept/deny it.
+  - The pull request workflow is intentional friction that functions as a consensus algorithm. It forces ambiguity to be resolved *before* a policy is merged. Unlike a Google Doc where edits are fluid and often ignored, a Git-based workflow requires explicit approval from stakeholders and creates a rigorous audit trail of decision-making.
+
+- Institutional Memory as distributed ledger
+  - We tried to reframe management as an information retrieval problem. High-turnover organisations suffer from knowledge decay. The handbook acts as externalized long-term memory that preserves the "state" of the organisation independent of the specific humans currently staffing it. It transforms the org from a volatile to a persistent system.
+
+## Additional Info
+
+- **Restructuring & Fieldkit Integration:** As of April 2026, DAY is undergoing a massive organisational restructuring. This handbook is the live production environment for this change. We are actively rewriting all SOPs that hold the new structure together, directly applying the wetware code philosophy from [Fieldkit OSS](/projects/fieldkit).
+- **Architecture:** Directories map to departments and `.codeowners` files assign maintenance responsibility to specific leads, ensuring documentation never goes stale.
+
+<Callout title="From GitLab's Handbook (handbook.gitlab.com/handbook/about)">
+At GitLab our handbook is extensive and keeping it relevant is an important part of everyone's job. It is a vital part of who we are and how we communicate. We established these processes because we saw these benefits:
+
+1. Reading is much faster than listening.
+2. Reading is async, you don't have to interrupt someone or wait for them to become available.
+3. Talent Acquisition is easier if people can see what we stand for and how we operate.
+4. Retention is better if people know what they are getting into before they join.
+5. On-boarding is easier if you can find all relevant information spelled out.
+6. Teamwork is easier if you can read how other parts of the company work.
+7. Discussing changes is easier if you can read what the current process is.
+8. Communicating change is easier if you can just point to the diff.
+9. Everyone can contribute to it by proposing a change via a merge request.
+
+One common concern newcomers to the handbook express is that the strict documentation makes the company more rigid. In fact, writing down our current process in the handbook has the effect of empowering contributors to propose change. As a result, this handbook is far from rigid. You only need to look at the [handbook commits list](https://gitlab.com/gitlab-com/content-sites/handbook/-/commits/main) to see the evidence. Every attempt is made to document guidelines and processes in the handbook. However, it is not possible to document every possible situation or scenario that could potentially occur. Just because something is not yet in the handbook does not mean that it is allowed. GitLab will review each team member's concern or situation based on local laws to determine the best outcome and then update the handbook accordingly. If you have questions, please discuss with your manager or contact the [People Success](https://handbook.gitlab.com/handbook/people-group/) team.
+</Callout>
