@@ -1,0 +1,10 @@
+---
+description: Never add Co-authored-by trailers to git commit messages
+alwaysApply: true
+---
+
+# Git commit messages
+
+Do **not** add `Co-authored-by:` (or similar) trailers naming Cursor, Claude, Copilot, or any other AI tool. The human author owns the commits.
+
+When suggesting commit messages, squash messages, or `git commit` bodies, omit trailer blocks that attribute authorship to assistants.

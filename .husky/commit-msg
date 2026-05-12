@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Cursor may auto-insert a co-author trailer into the commit message file.
+# Strip it so commitlint + repo policy stay clean.
+if [ -f "$1" ]; then
+  node -e "const fs=require('fs');const p=process.argv[1];let s=fs.readFileSync(p,'utf8');s=s.replace(/\\nCo-authored-by: Cursor <cursoragent@cursor\\.com>\\n?/g,'\\n');fs.writeFileSync(p,s);" "$1"
+fi
+
+pnpm exec commitlint --edit "$1"

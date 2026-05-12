@@ -6,10 +6,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Do **not** add `Co-authored-by:` trailers for Claude, Cursor, or other AI tools to commit messages. The human author owns the commits.
 
-## Context7 Libraries
+## Context7 — mandatory before edits
 
-- Fumadocs: `/fuma-nama/fumadocs` (primary — 948 snippets, score 82.75)
-- Fumadocs full docs: `/llmstxt/fumadocs_dev_llms_txt` (more snippets, use when primary lacks coverage)
+**Before modifying any file that uses a library below, run `npx ctx7@latest docs <id> "<your question>"` via the `context7-cli` skill to fetch current docs.** Do not rely on training data for API signatures, configuration options, or version-specific behaviour — these change between releases and stale knowledge is a common source of bugs.
+
+Use `npx ctx7@latest library <name> "<question>"` first if you need to resolve an ID not listed here.
+
+### Library IDs
+
+| Library | Context7 ID | Notes |
+|---------|-------------|-------|
+| Fumadocs | `/fuma-nama/fumadocs` | Primary (948 snippets) |
+| Fumadocs full docs | `/llmstxt/fumadocs_dev_llms_txt` | Use when primary lacks coverage (4321 snippets) |
+| Next.js | `/vercel/next.js` | Use `/vercel/next.js/v16.2.2` for version-specific queries |
+| Tailwind CSS | `/tailwindlabs/tailwindcss.com` | v4 — config syntax changed significantly from v3 |
+| shadcn/ui | `/shadcn-ui/ui` | Primary; use `/llmstxt/ui_shadcn_llms_txt` for broader coverage |
+| Zod | `/colinhacks/zod/v4.0.1` | v4 — breaking changes from v3; use this ID for v4 queries |
+| Lucide React | `/lucide-icons/lucide` | Icon names and import paths |
 
 ## Commands
 
