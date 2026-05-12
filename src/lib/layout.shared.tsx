@@ -33,6 +33,11 @@ export function baseOptions(): BaseLayoutProps {
         text: 'Instagram',
         url: 'https://instagram.com/uzayermasud',
       },
+      {
+        label: 'Graph',
+        url: '/graph',
+        text: 'Graph View',
+      },
     ],
   };
 }
