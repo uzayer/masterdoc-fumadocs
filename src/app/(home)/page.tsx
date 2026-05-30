@@ -6,7 +6,7 @@ const sections = [
   { label: 'Preface', href: '/preface' },
   { label: 'History', href: '/history' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Academic record', href: '/academic-record' },
+  { label: 'Writing', href: '/writing' },
   { label: 'Reference', href: '/reference' },
 ] as const;
 

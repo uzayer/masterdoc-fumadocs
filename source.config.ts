@@ -11,6 +11,7 @@ export const docs = defineDocs({
   docs: {
     schema: pageSchema.extend({
       tags: z.array(z.string()).optional(),
+      date: z.string().optional(),
     }),
     postprocess: {
       includeProcessedMarkdown: true,
