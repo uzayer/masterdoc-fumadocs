@@ -66,3 +66,20 @@ This is a **Next.js 16 + Fumadocs** documentation site. The goal is to display `
 ### Current intent
 
 The site is a personal portfolio/biography rendered through Fumadocs' standard MDX pipeline. Content lives in `content/docs/` as `.mdx` files. The goal is a single long scrollable page with Fumadocs' built-in TOC providing in-page anchor navigation. `content/docs/index.mdx` is the primary page.
+
+## Content sourcing
+
+`content/docs/` is a manually curated, one-way publish target sourced from `notes/Masterdoc.md` in the private vault (separate git repo, private on GitHub). Masterdoc is the single unfiltered source of the full personal narrative; this site is a deliberate subset of it, not a mirror or an automated export.
+
+**Workflow:** when a masterdoc section is ready to publish, copy it into the corresponding `content/docs/` file by hand (or an agent does it under direction) and apply this checklist while copying — never paste:
+
+1. Exact grades/scores — this is why `academic-record.mdx` has no public content; don't restore it.
+2. Specific mental-health or family-crisis detail.
+3. Named grievances about identifiable people or organisations (e.g. the Sirkoi dispute — keep the product-judgment lesson, drop the grievance beats).
+4. Anything else drawn from masterdoc's academic-record section.
+
+Everything else — project write-ups, writing, preface, reference — defaults to portable as-is; no checklist needed for those categories.
+
+**Do not use frontmatter flags (`draft: true`, etc.) as a privacy boundary.** `llms-full.txt` and similar routes serialise all pages regardless of draft status — confirmed leaking `academic-record.mdx` content (grades, and via `history.mdx`, family-crisis and Sirkoi detail) on 2026-07-15 despite `draft: true`. The actual privacy boundary is *presence in this repo*: if a paragraph shouldn't be public, it doesn't get copied here in the first place. Reserve `draft` for genuine WIP/readiness status, never for confidentiality.
+
+**Sync direction is one-way and manual.** This site does not auto-update when masterdoc changes — re-run the copy-and-checklist pass deliberately (e.g. before sending the site to someone) rather than trying to keep it continuously in sync.
