@@ -1,4 +1,4 @@
-import { defineConfig, defineDocs } from 'fumadocs-mdx/config';
+import { defineCollections, defineConfig, defineDocs } from 'fumadocs-mdx/config';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
 import { remarkMdxMermaid, remarkSteps } from 'fumadocs-core/mdx-plugins';
 import lastModified from 'fumadocs-mdx/plugins/last-modified';
@@ -15,12 +15,21 @@ export const docs = defineDocs({
     }),
     postprocess: {
       includeProcessedMarkdown: true,
-      extractLinkReferences: true,
     },
   },
   meta: {
     schema: metaSchema,
   },
+});
+
+// Short dated entries shown as a stream on the homepage. One file per update.
+export const updates = defineCollections({
+  type: 'doc',
+  dir: 'content/updates',
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+  }),
 });
 
 export default defineConfig({
