@@ -9,6 +9,7 @@ import { File, Files, Folder } from 'fumadocs-ui/components/files';
 import { Mermaid } from '@/components/mdx/mermaid';
 import { OrgTag } from '@/components/org-tag';
 import { StatusCard } from '@/components/status-card';
+import { Timeline, TimelineSection } from '@/components/ui/skiper-ui/skiper74';
 
 export function getMDXComponents(components?: MDXComponents) {
   return {
@@ -28,6 +29,8 @@ export function getMDXComponents(components?: MDXComponents) {
     Mermaid,
     OrgTag,
     StatusCard,
+    Timeline,
+    TimelineSection,
     ...components,
   } satisfies MDXComponents;
 }

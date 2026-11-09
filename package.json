@@ -19,6 +19,7 @@
     "beautiful-mermaid": "^1.1.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^14.11.1",
     "fumadocs-core": "16.18.3",
     "fumadocs-mdx": "15.5.2",
     "fumadocs-ui": "16.18.3",
