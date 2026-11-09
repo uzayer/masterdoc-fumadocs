@@ -4,3 +4,6 @@ allowBuilds:
   puppeteer: false
   sharp: true
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - framer-motion@14.11.1
+  - motion-dom@14.11.1
