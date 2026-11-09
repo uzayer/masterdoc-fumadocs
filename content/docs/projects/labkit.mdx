@@ -1,11 +1,15 @@
 ---
 title: "LabKit"
-description: A headless CMS-backed platform that treats a research lab's publications, grants, and people as a semantic graph rather than a page tree.
+description: An open-source research information system that treats a research lab's publications, grants, and people as structured data rather than a page tree. Runs DIAL's website in production.
 icon: Database
 tags: [projects, research, software]
 ---
 
 *Late 2024 – Ongoing*
+
+<Callout title="Live">
+  LabKit is [open source on GitHub](https://github.com/uzayer/labkit) (MIT, pre-release). [DIAL's website](https://dial-research.vercel.app) has run on it since 28 September 2026, covering 191 publications. There's also a [public demo](https://trylabkit.vercel.app).
+</Callout>
 
 ## What
 
@@ -68,14 +72,13 @@ flowchart LR
 
 ## Additional Info
 
-- **Stack:** Built on PayloadCMS 3 (headless CMS), Next.js, and MongoDB. UI components from shadcn/ui, which sets a visual standard that matches the quality of the research being produced rather than defaulting to the academic web's typical ugliness.
+- **Stack:** Built on Payload CMS (headless CMS), Next.js, and SQLite/Turso. UI components from shadcn/ui, which sets a visual standard that matches the quality of the research being produced rather than defaulting to the academic web's typical ugliness.
 - **Scholarly data compliance:** The site outputs JSON-LD metadata compliant with Google Scholar's indexing spec and OpenAlex's schema. DIAL's publications surface in actual academic search infrastructure instead of just Google and are readable by the AI tools that increasingly mediate how researchers discover work. I believe this will directly impact citation count and collaboration request rates for DIAL.
 - **Agentic SEO:** Beyond scholarly compliance, the frontend meets current agent-readability standards like server-rendered HTML with no JavaScript rendering barrier, semantic markup, clean sitemaps, and correctly configured robots.txt for AI crawlers. AI tools (GPTBot, Claude, Perplexity) can fully index the site without any additional configuration, meaning DIAL's research surfaces in AI-mediated discovery by default.
+- **Ingestion:** Paste an ORCID iD and LabKit resolves the researcher's works to DOIs, pulls metadata from Crossref and OpenAlex, and creates the publications, venues, organisations and people they reference. BibTeX (including Google Scholar exports), pasted citations and bare DOI lists all go through the same engine. Anything it can't match safely goes to a review queue for a human, because a wrong match corrupts a real person's public profile.
 - **Future direction:** The knowledge base is designed to be queryable beyond a webpage. Planned builds include a CLI and agent integration layer so AI tools can query the lab's full research graph (publications, grants, projects, team, etc) directly, without going through a page.
 
 ## Related
 
-- [ResearchNet](/projects/researchnet) — speculative automation layer that extends the data model LabKit is building
 - [DIAL Recruitment & Onboarding Redesign](/projects/dial-recruitment) — parallel DIAL project; LabKit needed to exist first to give DIAL the infrastructure to take on more interns
-- [HCI Internship for HS Students](/projects/hci-internship) — downstream: the internship program only becomes feasible once LabKit gives DIAL the capacity to handle more people
 - [Fieldkit OSS](/projects/fieldkit) — parallel philosophy; LabKit is to research labs what Fieldkit is to student orgs: opinionated, reproducible infrastructure

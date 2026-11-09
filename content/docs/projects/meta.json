@@ -2,12 +2,12 @@
   "title": "Projects",
   "icon": "Layers",
   "pages": [
+    "---Now---",
+    "atlas",
     "---Research & Lab---",
     "misgendered-nlp",
     "dial-recruitment",
     "labkit",
-    "researchnet",
-    "hci-internship",
     "---Organisational Systems---",
     "breezers-brew",
     "ghost-cms-workflow",
@@ -16,7 +16,6 @@
     "fieldkit",
     "---Standalone---",
     "sirkoi",
-    "auctus",
-    "writing-workshop"
+    "auctus"
   ]
 }

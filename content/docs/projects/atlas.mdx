@@ -1,0 +1,34 @@
+---
+title: Atlas
+description: The shared record of how a team builds software with coding agents. I do frontend, the design system, docs, tutorials, and talk to companies.
+icon: Compass
+tags: [projects, software, startup]
+---
+
+*July 2026 – Ongoing*
+
+## What
+
+- [Atlas](https://github.com/tryatlas/atlas) is an open-source desktop app (macOS, Windows, Linux) for teams that write code with AI agents. It records every agent session a team runs (Claude Code, Codex, Cursor and others), links each one to the commit it produced, and puts the whole team's sessions on one shared timeline that people can comment on.
+- It's a startup, so the job is whatever needs doing. What I've done so far:
+  - **Frontend.** About half of the app's commits since I joined: chat, the timeline, settings, notifications, pull requests, source control, theming and the team chat.
+  - **Design system.** Moved the whole app onto one token scale for colour, type, spacing and radii, with a test that stops one-off values from coming back. Then I extracted it into its own open-source package, [@tryatlas/design](https://github.com/tryatlas/design), so the desktop app, web app and docs share the same components.
+  - **Docs.** Built and wrote [docs.tryatlas.cc](https://docs.tryatlas.cc/) from scratch.
+  - **Tutorials.** Made the [Atlas Learn playlist](https://youtube.com/playlist?list=PLWa1N2LyiGv0), short videos on how to use Atlas.
+  - **Talking to companies.** Talking to engineering teams about how they work with agents and whether Atlas fits.
+
+## Why
+
+- Agents made writing code cheap, so the hard part moved to understanding it: why the code exists, who asked for it, and what the agent was told. On a team, that context ends up scattered across everyone's laptops.
+- That's the same problem I keep coming back to. Knowledge that lives in one person's head decays the moment they leave. The [GitLab-inspired handbook](/projects/gitlab-handbook) and [Fieldkit](/projects/fieldkit) were about that for organisations, and [LabKit](/projects/labkit) was about it for research labs. Atlas is the same idea applied to engineering teams.
+
+## Additional Info
+
+- **Stack:** Tauri (Rust) with a React and TypeScript frontend.
+- **Scale:** 9k+ GitHub stars, open source under Apache 2.0, with regular releases including Atlas Teams.
+
+## Related
+
+- [LabKit](/projects/labkit): structured data instead of hand-maintained pages, for research labs
+- [GitLab-Inspired Handbook](/projects/gitlab-handbook): documentation as code for an organisation
+- [Fieldkit OSS](/projects/fieldkit): opinionated, reproducible infrastructure for student organisations
